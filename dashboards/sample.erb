@@ -1,0 +1,26 @@
+<% content_for :title do %>My dashboard<% end %>
+<div class="gridster">
+  <ul>
+	<li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+	  <div data-view="TwelveHourClock"></div>
+	</li>
+
+    <li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-id="ethprice" data-view="Ethprice" data-ethprice="" data-prefix="$"></div>
+    </li>
+
+    <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
+      <div data-id="btcprice" data-view="Btcprice" data-btcprice="" data-prefix="$"></div>
+    </li>
+
+<script type='text/javascript'>
+$(function() {
+	  // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
+	Dashing.widget_base_dimensions = [630, 1060]
+	Dashing.numColumns = 3
+});
+</script>
+
+
+  </ul>
+</div>
